@@ -270,7 +270,3 @@ uvicorn app:app --reload --port 8000
 * Sentence Transformers
 
 ---
-
-## 11. License
-
-This project is developed for educational and academic purposes.
