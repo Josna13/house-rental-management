@@ -143,7 +143,7 @@ const Home = () => {
         if (filters.maxRent) cleanInteraction.maxRent = filters.maxRent;
         if (lifestyle?.profession) cleanInteraction.profession = lifestyle.profession;
 
-        fetch("http://localhost:5000/api/recommend", {
+        fetch("https://house-rental-management.onrender.com/api/recommend", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -422,7 +422,7 @@ const Home = () => {
                                             return (
                                                 <>
                                                     {parseImages(property.images).length > 0 ? (
-                                                        <img src={`http://localhost:5000/${parseImages(property.images)[0]}`} alt={property.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                                                        <img src={`https://house-rental-management.onrender.com/${parseImages(property.images)[0]}`} alt={property.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                                                     ) : (
                                                         <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400">No Image</div>
                                                     )}
@@ -502,7 +502,7 @@ const Home = () => {
                                                 to={`/properties/${property.id}`} 
                                                 onClick={() => {
                                                     const currentUserId = user ? user.id : "user123";
-                                                    fetch("http://localhost:5000/api/recommend", {
+                                                    fetch("https://house-rental-management.onrender.com/api/recommend", {
                                                         method: "POST",
                                                         headers: { "Content-Type": "application/json" },
                                                         body: JSON.stringify({ user_id: currentUserId, interactions: [{ type: property.type, location: property.location, maxRent: property.rent }] })
@@ -590,7 +590,7 @@ const Home = () => {
                             <div key={property.id} className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group flex flex-col overflow-hidden">
                                 <div className="relative h-56 overflow-hidden">
                                     {parseImages(property.images).length > 0 ? (
-                                        <img src={`http://localhost:5000/${parseImages(property.images)[0]}`} alt={property.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                                        <img src={`https://house-rental-management.onrender.com/${parseImages(property.images)[0]}`} alt={property.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                                     ) : (
                                         <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400">No Image provided</div>
                                     )}
@@ -665,7 +665,7 @@ const Home = () => {
                                             to={`/properties/${property.id}`} 
                                             onClick={() => {
                                                 const currentUserId = user ? user.id : "user123";
-                                                fetch("http://localhost:5000/api/recommend", {
+                                                fetch("https://house-rental-management.onrender.com/api/recommend", {
                                                     method: "POST",
                                                     headers: { "Content-Type": "application/json" },
                                                     body: JSON.stringify({ user_id: currentUserId, interactions: [{ type: property.type, location: property.location, maxRent: property.rent }] })

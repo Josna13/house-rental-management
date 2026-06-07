@@ -164,7 +164,7 @@ const MapComponent = ({ properties, recommendedIds, height = '600px' }) => {
                                             const imgs = parseImages(property.images);
                                             return imgs.length > 0 ? (
                                                 <img
-                                                    src={`http://localhost:5000/${imgs[0]}`}
+                                                    src={`https://house-rental-management.onrender.com/${imgs[0]}`}
                                                     alt={property.title}
                                                     className="w-full h-full object-cover"
                                                 />

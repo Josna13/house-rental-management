@@ -27,7 +27,7 @@ const Notifications = () => {
 
         const fetchNotifications = async () => {
             try {
-                const res = await fetch('http://localhost:5000/api/notifications', {
+                const res = await fetch('https://house-rental-management.onrender.com/api/notifications', {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
                 if (res.ok) {
@@ -59,7 +59,7 @@ const Notifications = () => {
 
     const markAsRead = async (id, propertyId) => {
         try {
-            await fetch(`http://localhost:5000/api/notifications/${id}/read`, {
+            await fetch(`https://house-rental-management.onrender.com/api/notifications/${id}/read`, {
                 method: 'PUT',
                 headers: { 'Authorization': `Bearer ${token}` }
             });

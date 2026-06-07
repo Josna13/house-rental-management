@@ -1,0 +1,58 @@
+# ==========================
+# Environment Variables
+# ==========================
+.env
+.env.local
+.env.*.local
+
+# ==========================
+# Node.js (Backend & Frontend)
+# ==========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==========================
+# Frontend Build Output
+# ==========================
+frontend/dist/
+frontend/dist-ssr/
+frontend/.vite/
+
+# ==========================
+# Uploads (user-uploaded files)
+# ==========================
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# ==========================
+# Python (Recommendation Service)
+# ==========================
+recommendation_service/__pycache__/
+recommendation_service/*.pyc
+recommendation_service/*.pyo
+recommendation_service/venv/
+recommendation_service/.venv/
+*.egg-info/
+dist/
+build/
+
+# ==========================
+# OS / Editor Files
+# ==========================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ==========================
+# Logs
+# ==========================
+*.log
+logs/

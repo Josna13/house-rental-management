@@ -73,7 +73,7 @@ const EditProperty = () => {
                 if (data.images) {
                     try {
                         const imgs = typeof data.images === 'string' ? JSON.parse(data.images) : data.images;
-                        setPreviewImages(imgs.map(img => `http://localhost:5000/${img}`));
+                        setPreviewImages(imgs.map(img => `https://house-rental-management.onrender.com/${img}`));
                     } catch(e) {}
                 }
             } catch (err) {

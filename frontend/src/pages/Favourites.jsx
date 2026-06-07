@@ -61,7 +61,7 @@ const Favourites = () => {
                                 {(() => {
                                     const imgs = parseImages(property.images);
                                     return imgs.length > 0 ? (
-                                        <img src={`http://localhost:5000/${imgs[0]}`} alt={property.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                                        <img src={`https://house-rental-management.onrender.com/${imgs[0]}`} alt={property.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                                     ) : (
                                         <div className="w-full h-full flex items-center justify-center text-gray-400">No Image</div>
                                     );

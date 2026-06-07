@@ -258,7 +258,7 @@ const PropertyDetails = () => {
             <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-gray-100 flex flex-col md:flex-row items-start gap-8">
                 <div className="w-full md:w-1/2 relative rounded-2xl overflow-hidden aspect-video bg-gray-100">
                     {images.length > 0 ? (
-                        <img src={`http://localhost:5000/${images[0]}`} alt={property.title} className="w-full h-full object-cover" />
+                        <img src={`https://house-rental-management.onrender.com/${images[0]}`} alt={property.title} className="w-full h-full object-cover" />
                     ) : (
                         <div className="w-full h-full flex items-center justify-center text-gray-400">No Image available</div>
                     )}
@@ -482,7 +482,7 @@ const PropertyDetails = () => {
                             <div className="grid grid-cols-2 gap-4">
                                 {images.slice(1).map((img, idx) => (
                                     <div key={idx} className="aspect-video rounded-xl overflow-hidden bg-gray-100 group">
-                                        <img src={`http://localhost:5000/${img}`} alt={`${property.title} - ${idx + 2}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                                        <img src={`https://house-rental-management.onrender.com/${img}`} alt={`${property.title} - ${idx + 2}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                                     </div>
                                 ))}
                             </div>
